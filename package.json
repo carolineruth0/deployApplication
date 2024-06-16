@@ -4,7 +4,7 @@
   "description": "little tiers",
   "main": "http_server.js",
   "scripts": {
-    "test": "echo \"No test specified\""
+    "test": "echo this is for testing github actions"
     "build": "npm install",
     "start": "node http_server.js"
   },
