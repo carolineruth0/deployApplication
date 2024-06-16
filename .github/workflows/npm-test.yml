@@ -1,17 +1,21 @@
-name: npm test
-on: [push]
+name: Main Merges
+on:
+  push:
+    branches: [ main ]
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: [14.x]
+        node: [ 14, 16, 18 ]
+
+    name: Node ${{ matrix.node }} sample
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - name: Run tests
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run build --if-present
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm run lint
       - run: npm run test
