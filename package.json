@@ -25,6 +25,7 @@
     "faker": "^5.1.0",
     "firebase": "^10.12.2",
     "firebase-functions": "^5.0.1",
+    "firebase-tools": "13.11.2",
     "lowdb": "^1.0.0"
   },
   "engines": {
