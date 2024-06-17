@@ -24,10 +24,11 @@
     "express": "^4.19.2",
     "faker": "^5.1.0",
     "firebase": "^10.12.2",
+    "firebase-tools": "^11.0.0",
     "firebase-functions": "^5.0.1",
     "lowdb": "^1.0.0"
   },
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   }
 }
